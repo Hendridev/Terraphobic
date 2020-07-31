@@ -1,0 +1,706 @@
+/* Meyer Clearfix */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fredoka+One&family=Montserrat:wght@300&family=Unica+One&display=swap');
+
+
+/* my code */
+html{
+	font-family: var(--font-lighter);
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+:root{
+	--font-LOGO:'Fredoka One', cursive;
+	--font-ipsum:'Montserrat', sans-serif;
+	--font-lighter:'Unica One', cursive;
+	--font-berkshire:'Berkshire Swash', cursive;
+}
+
+.container{
+	margin: 0 3rem;
+	padding: .5rem 0;
+}
+
+img{
+	width: 100%;
+}
+
+header{
+	position: absolute;
+	width: 100%;
+}
+
+header img{
+	width: 45px;
+	height: 45px;
+	margin-left: 1rem;
+}
+
+.hero{
+	background: url(../Images/plant-hero.jpg) top no-repeat;
+	height: 100vh;
+	background-size: cover;
+}
+
+.navbar{
+	top: 0rem;
+	position: relative;
+	padding: 1rem 0;
+	height: 6rem;
+	width: 100%;
+}
+
+.logo{
+	width: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.logo span {
+	position: absolute;
+	font-size: 2.2rem;
+	font-family: var(--font-lighter);
+	top: 1.3rem;
+	color: rgb(247, 247, 247);
+	font-weight: 600;
+}
+
+.hamburger{
+	font-size: 2rem;
+	position: absolute;
+	transform: translateY(100%);
+	top: .6rem;
+	right: 2rem;
+	z-index: 1200;
+	color: rgb(253, 253, 253);
+	overflow: hidden;
+}
+
+.fa-times{
+	display: none;
+}
+
+.fa-bars:hover{
+	transform: scale(.5);
+	transition: .5s;
+}
+
+.hamburger-list{
+	background-color: rgba(128, 128, 128, 0.041);
+	border: 1px solid rgba(128, 128, 128, 0.041);
+	position: fixed;
+	top: 0rem;
+	right: 0;
+	width: 180px;
+	height: 100vh;
+	transform: translateX(120%);
+	overflow: hidden;
+	text-transform: uppercase;
+	z-index: 1000;
+}
+.hamburger-list ul{
+	position: absolute;
+	top: 10rem;
+	width: 100%;
+	height: 100%;
+}
+.hamburger-list li {
+	height: 6rem;
+	text-align: center;
+	line-height: 6rem;
+	margin: 1rem 0;
+	font-size: 1.5rem;
+	font-family: var(--font-LOGO);
+	text-decoration: none;
+}
+
+.hamburger-list a {
+	text-decoration: none;
+	color: white;
+}
+
+.hamburger-list a:hover{
+	color: rgba(166, 180, 173, 0.767);
+	transition: .5s;
+}
+
+.fa-home{
+	color: white;
+	font-size: 2rem;
+}
+
+.toggle .hamburger-list{
+	transform: translateX(0);
+	transition: .5s;
+}
+
+.toggle .hamburger-list{
+	position: absolute;
+	transition: 0s;
+}
+
+.toggle .fa-bars{
+	display: none;
+}
+
+.toggle .fa-times{
+	display: block;
+}
+
+.toggle .fa-times:hover{
+	transform: rotate(360deg);
+	transition: .5s;
+}
+
+/* Header End */
+
+/* Hero item Start */
+
+.hero-title{
+	position: relative;
+	width: 25rem;
+	margin: 0rem auto;
+	text-align: center;
+	transform: translateY(100%);
+}
+
+.hero-title p {
+	font-family: var(--font-lighter);
+	font-size: 5rem;
+	color: rgba(255, 255, 255, 0.993);
+}
+
+.hero-title button{
+	font-family: var(--font-lighter);
+	color: rgb(250, 255, 252);
+	font-size: 2rem;
+	margin-top: 1.5rem;
+	width: 10rem;
+	height: 4rem;
+	border: .5px  grey;
+	background-color: rgba(255, 255, 255, 0.048);
+	border: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+.hero-title button:hover{
+	transform: scale(1.2);
+	transition: .5s;
+}
+
+/* Hero end */
+
+/* Quotes start */
+
+.quotes{
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.945);
+	width: 100%;
+	height: 20rem;
+}
+.quote {
+	font-size: 2rem;
+	margin: 13vh auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: white;
+	font-family: var(--font-lighter);
+}
+.quote p{
+	text-align: center;
+	text-shadow: 1px 1px 1px gray;
+}
+
+
+.about{
+	position: relative;
+	height: 400px;
+	text-align: center;
+	font-family: var(--font-lighter);
+}
+
+.about h1{
+	font-size: 2.5rem;
+	margin-top: 50px;
+	margin-bottom: 2rem;
+	text-shadow: 1px 1px 1px gray;
+
+}
+
+.about p {
+	font-size: 1.6rem;
+}
+
+.float-right{
+	position: relative;
+	float: right;
+	width: 400px;
+	height: 200px;
+	box-sizing: border-box;
+	top: 10rem;
+	right: 20rem;
+}
+
+.fa-asterisk{
+	font-size: 1.5rem;
+	margin-top: 1.3rem;
+	transform: rotateX(360deg) .5s;
+	transition: .5s;
+}
+
+
+.fa-asterisk:hover{
+	transform: rotate(360deg);
+	transition: .5s;
+}
+
+.magic-img{
+	border-radius: 10px;
+	position: relative;
+	background: url(../Images/hero-alternate.jpg) center no-repeat;
+	background-position: 0 -50px;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	top: 5rem;
+	left: 10rem;
+	float: left;
+
+}
+
+.shop{
+	position: relative;
+	height: 660px;
+	width: 100%;
+}
+
+.shop h1{
+	text-align: center;
+	font-size: 3rem;
+	text-shadow: 1px 1px 1px gray;
+}
+
+.wrapper-shop{
+	top: 2rem;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.box-item{
+	margin: 10px;
+	width: 250px;
+	height: 250px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgb(54, 53, 53);
+}
+
+.box-item:hover{
+	opacity: .9;
+	transition: .5s;
+	transform: scale(.9);
+	box-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+.image-box{
+	height: 180px;
+	border-radius: 10px 10px 0 0;
+	filter: brightness(85%)
+}
+
+/* box image */
+.box1{
+	background: url(../Images/decorplant1.jpg)center;
+	background-size: cover;
+	background-position: 0 -120px;
+}
+.box2{
+	background: url(../Images/decorplant2.jpg)center;
+	background-size: cover;
+	background-position: 0 2px;
+}
+.box3{
+	background: url(../Images/decorplant3.jpg) center;
+	background-size: cover;
+}
+
+.box4{
+	background: url(../Images/decorplant4.jpg) center;
+	background-size: cover;
+	background-position: 0 -140px;
+}
+
+.box5{
+	background: url(../Images/terrarium2.jpg) center;
+	background-size: cover;
+}
+
+.box6{
+	background: url(../Images/terrarium3.jpg) center;
+	background-size: cover;
+}
+
+.box7{
+	background: url(../Images/terrarium4.jpg) center;
+	background-size: cover;
+}
+
+.box8{
+	background: url(../Images/terrarium1.jpg) center;
+	background-size: cover;
+}
+/* box image end */
+
+.description-box{
+	position: relative;
+	border-top: 1px solid rgb(221, 214, 214);
+	background-color: rgb(255, 255, 255);
+	height: 70px;
+	border-radius: 0 0 10px 10px;
+}
+
+.description-box h1{
+	 font-size: 2rem;
+	 margin-bottom: .8rem;
+}
+.description-box p {
+	font-size: 1.1rem;
+}
+
+.description-box .price{
+	width: 40px;
+	height: 30px;
+	position: absolute;
+	top: 3.3rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+	background-color: rgb(143, 158, 148);
+	text-align: center;
+	border-radius: 2px;
+}
+
+.description-box .price h2{
+	margin-top: .5rem;
+	text-shadow: 1px 1px 1px gray;
+}
+
+footer{
+	background-color: black;
+	height: 300px;
+}
+
+.footer-wrapper{
+	margin-top: 25px;
+	height: 250px;
+	
+}
+
+footer h1{
+	text-align: center;
+	font-size:2rem;
+	color: white;
+	text-shadow: 1px 1px 1px gray;
+}
+
+.reservation-input{
+	margin: auto;
+	width: 80%;
+	height: 200px;
+}
+
+.reservation-input input{
+	display: block;
+	margin: 1rem auto;
+	width: 210px;
+	height: 30px;
+	background-color: rgba(255, 255, 255, 0.959);
+	font-family: var(--font-lighter);
+	border: none;
+}
+
+.reservation-input input:nth-child(1){
+	margin-top: 2rem;
+}
+
+.submit{
+	background-color: rgb(52, 53, 53);
+	text-align: center;
+	width: 215px;
+	height: 30px;
+	margin: 1rem auto;
+}
+.submit:hover{
+	background-color: rgb(14, 14, 14);
+}
+.fa-envelope{
+	margin-top: 5px;
+	font-size: 1.8rem;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and (max-width:1090px){
+	
+.about{
+	position: relative;
+	height: 600px;
+	text-align: center;
+}
+
+.about h1{
+	font-size: 2.5rem;
+	margin-top: 50px;
+	margin-bottom: 2rem;
+}
+
+.about p {
+	font-size: 1.6rem;
+}
+
+.float-right{
+	position: static;
+	float: none;
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.magic-img{
+	margin: auto;
+	border-radius: 10px;
+	margin-top: 6rem;
+	position: static;
+	float: none;
+	width: 250px;
+	height: 250px;
+}
+
+.shop{
+	position: relative;
+	height: 600px;
+	width: 100%;
+}
+
+.shop h1{
+	text-align: center;
+}
+
+}
+
+@media screen and (max-width:900px){
+	.container{
+		margin: 0 0rem;
+		padding: 0rem 0;
+	}
+
+	.toggle .hamburger-list{
+		background-color: rgba(12, 12, 12, 0.904);
+	}
+
+	.shop{
+		position: relative;
+		height: 900px;
+		width: 100%;
+	}
+	
+	.shop h1{
+		text-align: center;
+		font-size: 3rem;
+	}
+	
+	.wrapper-shop{
+		top: 2rem;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-around;
+		align-items: center;
+	}
+	
+	.box-item{
+		margin: 15px 10px;
+		margin-top: 5px;
+		width: 140px;
+		height: 190px;
+		border: none;
+	}
+	
+	.image-box{
+		height: 130px;
+	}
+	
+	/* box image */
+	.box1{
+		background: url(../Images/decorplant1.jpg) center;
+		background-size: cover;
+		background-position: 0 -60px;
+	}
+	.box2{
+		background: url(../Images/decorplant2.jpg)center;
+		background-size: cover;
+		background-position: -30px 0px;
+	}
+	.box3{
+		background: url(../Images/decorplant3.jpg) center;
+		background-size: cover;
+	}
+	
+	.box4{
+		background: url(../Images/decorplant4.jpg) center;
+		background-size: cover;
+		background-position: 0 -60px;
+	}
+	
+	.box5{
+		background: url(../Images/terrarium2.jpg) center;
+		background-size: cover;
+		background-position: -20px 0;
+	}
+	
+	.box6{
+		background: url(../Images/terrarium3.jpg) center;
+		background-size: cover;
+	}
+	
+	.box7{
+		background: url(../Images/terrarium4.jpg) center;
+		background-size: cover;
+		background-position: -40px 0;
+	}
+	
+	.box8{
+		background: url(../Images/terrarium1.jpg) center;
+		background-size: cover;
+	}
+	/* box image end */
+	
+	.description-box{
+		position: relative;
+		border-top: 1px solid grey;
+		background-color: rgb(255, 255, 255);
+		height: 40px;
+	}
+	
+	.description-box h1{
+		 font-size: 1.4rem;
+		 margin-bottom: .5rem;
+	}
+	.description-box p {
+		font-size: 1rem;
+	}
+	
+	.description-box .price{
+		width: 30px;
+		height: 25px;
+		position: absolute;
+		top: 2rem;
+		right: .5rem;
+		font-size: 2rem;
+		color: rgb(255, 255, 255);
+		background-color: rgb(143, 158, 148);
+		text-align: center;
+		border-radius: 2px;
+	}
+	
+	.description-box .price h2{
+		margin-top: .3rem;
+		font-size: 1.7rem;
+	}
+
+	.footer-wrapper h1{
+		line-height: 10vh;
+		text-align: center;
+		font-size:2rem;
+		color: white;
+		text-shadow: 1px 1px 1px gray;
+	}
+}
+
+/* Animate */
+
+@keyframes
